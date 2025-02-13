@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        function openAmazonApp() {
+            var appStoreUrl = "amzn://apps/android?p=com.amazon.venezia&ref=apps_sf_sta";
+            var webUrl = "https://www.amazon.com/dp/B0DWHY7S15/ref=apps_sf_sta";
+
+            // Try to open the Amazon App Store
+            window.location.href = appStoreUrl;
+
+            // Fallback to the browser after a short delay
+            setTimeout(function() {
+                window.location.href = webUrl;
+            }, 2000);
+        }
+    </script>
+</head>
+<body onload="openAmazonApp()">
+    <p>Redirecting to Amazon App Store...</p>
+</body>
+  </html>
