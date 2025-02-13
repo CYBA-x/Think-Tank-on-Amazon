@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        function openAmazonApp() {
-            var appStoreUrl = "amzn://apps/android?p=com.amazon.venezia&ref=apps_sf_sta";
-            var webUrl = "https://www.amazon.com/dp/B0DWHY7S15/ref=apps_sf_sta";
+        function openAmazonSearch() {
+            var appStoreSearchUrl = "amzn://apps/android?s=Think💡Tank";
+            var webSearchUrl = "https://www.amazon.com/s?k=Think💡Tank&rh=n%3A2350149011"; // Web fallback
 
-            // Try to open the Amazon App Store
-            window.location.href = appStoreUrl;
+            // Try to open the Amazon App Store search
+            window.location.href = appStoreSearchUrl;
 
-            // Fallback to the browser after a short delay
+            // Fallback to the web search after a short delay
             setTimeout(function() {
-                window.location.href = webUrl;
+                window.location.href = webSearchUrl;
             }, 2000);
         }
     </script>
 </head>
-<body onload="openAmazonApp()">
+<body onload="openAmazonSearch()">
     <p>Redirecting to Amazon App Store...</p>
 </body>
-  </html>
+</html>
