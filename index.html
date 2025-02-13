@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 50px; }
+        #message { display: none; }
+    </style>
     <script>
         function openAmazonSearch() {
             var appStoreSearchUrl = "amzn://apps/android?s=Think💡Tank";
@@ -15,11 +19,17 @@
             // Fallback to the web search after a short delay
             setTimeout(function() {
                 window.location.href = webSearchUrl;
-            }, 2000);
+
+                // Show the download message if the app store isn't installed
+                document.getElementById("message").style.display = "block";
+            }, 10000); // Wait for 2 seconds
         }
     </script>
 </head>
 <body onload="openAmazonSearch()">
     <p>Redirecting to Amazon App Store...</p>
+    <div id="message">
+        <p>It looks like you don't have the Amazon App Store installed.<a href="https://d36y3wgk29ncnk.cloudfront.net/ix/stable/default/us/Amazon_App.apk" target="_blank">Click here to download it</a> and continue to Think💡Tank!</p>
+    </div>
 </body>
 </html>
